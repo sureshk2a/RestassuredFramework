@@ -2,7 +2,8 @@ package com.apiautomation.resources;
 
 public enum ApiResources {
 
-    CreateEmployee("/create");
+    CreateEmployee("/create"),
+    GetEmployee("/employee/");
 
     String _resource;
 

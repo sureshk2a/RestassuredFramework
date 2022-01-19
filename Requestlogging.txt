@@ -11,16 +11,16 @@ Cookies:		<none>
 Multiparts:		<none>
 Body:
 {
-    "name": "Flecher",
+    "name": "Hank",
     "salary": "75000",
     "age": "24"
 }
 HTTP/1.1 200 OK
 Cache-Control: no-cache, private, max-age=31536000
 Content-Type: application/json
-Date: Wed, 19 Jan 2022 04:13:00 GMT
+Date: Wed, 19 Jan 2022 06:49:17 GMT
 Display: staticcontent_sol
-Expires: Thu, 19 Jan 2023 04:13:00 GMT
+Expires: Thu, 19 Jan 2023 06:49:16 GMT
 Host-Header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
 Referrer-Policy: 
 Response: 200
@@ -34,15 +34,15 @@ X-Origin-Cache-Control: no-cache, private
 X-Ratelimit-Limit: 60
 X-Ratelimit-Remaining: 58
 X-Sol: pub_site
-Content-Length: 133
+Content-Length: 130
 
 {
     "status": "success",
     "data": {
-        "name": "Flecher",
+        "name": "Hank",
         "salary": "75000",
         "age": "24",
-        "id": 6594
+        "id": 7890
     },
     "message": "Successfully! Record has been added."
 }
