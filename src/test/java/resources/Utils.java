@@ -10,13 +10,9 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
-
-import javax.print.DocFlavor;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.PrintStream;
-import java.util.Objects;
 
 public class Utils {
 
@@ -24,7 +20,7 @@ public class Utils {
 
     public RequestSpecification requestSpecification() throws FileNotFoundException {
         if(reqSpec==null){
-            PrintStream log = new PrintStream(new FileOutputStream("Requestlogging.txt"));
+            PrintStream log = new PrintStream(new FileOutputStream("Requestloggings.txt"));
             reqSpec = new RequestSpecBuilder().setBaseUri(ApplicationConstants.getBaseurl())
                     .addFilter(RequestLoggingFilter.logRequestTo(log))
                     .addFilter(ResponseLoggingFilter.logResponseTo(log))
