@@ -1,5 +1,6 @@
 package com.apiautomation.stepdefinitions;
 
+import com.apiautomation.constants.ApplicationConstants;
 import com.apiautomation.resources.ApiResources;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -47,19 +48,15 @@ public class UserValidations extends Utils {
 
     @Then("{string} in response is {string}")
     public void in_response_is(String responseKey, String expectedResponseValue) {
-        String resp = response.asString();
-        JsonPath js = new JsonPath(resp);
-        String actualValueFromResponse = js.get(responseKey);
+        String actualValueFromResponse = GetValueFromResponse(response,responseKey);
         assertEquals(String.format("Verifying %s in response has the value %s", responseKey,expectedResponseValue),actualValueFromResponse,expectedResponseValue);
     }
 
     @Then("verify id created maps to {string} using {string}")
-    public void verify_id_created_maps_to_using(String string, String string2) throws FileNotFoundException {
+    public void verify_id_created_maps_to_using(String dataToMap, String resourceName) throws FileNotFoundException {
         employeeId = GetValueFromResponse(response,"data.id");
-
-//        res = given().spec(requestSpecification()).pathParam("id","")
-//                .
-
+        Response newRes = given().spec(requestSpecification()).pathParam("id",employeeId)
+                .when().get(ApplicationConstants.getBaseurl()+ApiResources.valueOf(resourceName).getResource());
     }
 
 }
