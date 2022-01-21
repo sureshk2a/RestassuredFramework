@@ -19,7 +19,7 @@ public class UserValidations extends Utils {
     RequestSpecification res;
     Response response;
     TestDataBuild data = new TestDataBuild();
-    String dataFromResponse;
+    static String dataFromResponse;
 
     @Given("Add CreateTourist payload with name {string} and mail {string}")
     public void add_create_tourist_payload_with_name_and_mail(String name, String mail) throws FileNotFoundException {

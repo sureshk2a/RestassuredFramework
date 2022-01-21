@@ -1,5 +1,6 @@
 Feature: Validating Tourist API's
 
+  @CreateTourist
   Scenario Outline: Verify tourist is successfully created
     Given Add CreateTourist payload with name "<name>" and mail "<mail>"
     When User calls "CreateTourist" api with "post" request
@@ -10,6 +11,7 @@ Feature: Validating Tourist API's
       |name  | mail |
       |Tokyo|fdfankji@gmail.com|
 
+#  @DeleteTourist
 #  Scenario Outline: Verify tourist is successfully deleted
 #    Given Get "id" of the employee "<name>"
 #    When User calls "DeleteTourist" api with "delete" request
